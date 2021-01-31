@@ -1,0 +1,11 @@
+<div
+  class="create-note-container row"
+  *ngIf="isUserLoggedIn"
+>
+  <div>
+    <form (ngSubmit)="onCreate()" [formGroup]="form">
+      <input id="create-postit-text" type="text" formControlName="text" [autofocus] />
+      <button id="create-postit-submit" name="create-postit-submit" type="submit" class="btn" [disabled]="disableBtn">POST IT</button>
+    </form>
+  </div>
+</div>

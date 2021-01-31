@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="alert alert-warning" *ngIf="invalidLogin">{{ errorMessage }}</div>
+
+  <div
+    class="h-100 d-flex justify-content-center align-items-center"
+  >
+    <div class="login-box text-center">
+      <h1>POST IT</h1>
+      <form [formGroup]="form" (ngSubmit)="handleLogin()">
+        <input
+          placeholder="Email"
+          type="text"
+          id="email"
+          formControlName="email"
+          autofocus
+        />
+        <br />
+        <input
+          placeholder="Password"
+          type="password"
+          id="password"
+          formControlName="password"
+        />
+        
+        <div class="checkbox-container">
+          <label for="rememberMe">Remember Me</label>
+          <input
+            placeholder="Remember Me"
+            type="checkbox"
+            id="rememberMe"
+            formControlName="rememberMe"
+          />
+        </div>
+
+        <div class="text-center">
+          <button id="login-button" class="btn btn-success">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+   http://www.liquibase.org/xml/ns/dbchangelog 
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="steve.marks" id="create_data_source_config_table">
+        <createTable tableName="data_source_config">
+            <column name="id" type="bigint">
+                <constraints unique="true" />
+            </column>
+            <column name="name" type="varchar(255)" />
+            <column name="url" type="varchar(255)" />
+            <column name="username" type="varchar(255)" />
+            <column name="password" type="varchar(255)" />
+            <column name="driverClassName" type="varchar(255)" />
+            <column name="initialize" type="varchar(255)" />
+        </createTable>
+        <addAutoIncrement columnDataType="bigint" columnName="id" incrementBy="1" startWith="1" tableName="data_source_config" />
+
+        <createTable tableName="postit">
+            <column name="id" type="bigint">
+                <constraints unique="true" />
+            </column>
+            <column name="email" type="varchar(255)" />
+            <column name="text" type="varchar(255)" />
+        </createTable>
+        <addAutoIncrement columnDataType="bigint" columnName="id" incrementBy="1" startWith="1" tableName="postit" />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,6 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+Basic Authorization HTTP Request,10,482,148,781,232.76,0.000%,10.52632,4.43,1.89,431.0
+Get Postit notes before creating HTTP Request,10,373,296,398,27.16,0.000%,25.12563,9.74,5.03,397.0
+Create Postit1 HTTP Request,10000,214,95,791,53.62,0.000%,20.94158,9.65,7.65,471.8
+Get Postit notes HTTP Request,10000,259,122,1011,75.65,0.000%,20.95496,7858.76,4.20,384032.0
+TOTAL,20020,236,95,1011,69.77,0.000%,41.80588,7841.06,11.81,192060.2

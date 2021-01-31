@@ -1,0 +1,42 @@
+.note-item {
+  height: 250px;
+  width: 200px;
+  margin: 10px;
+
+  overflow: scroll;
+  scrollbar-width: none;
+
+  background-image: url("http://localhost:4200/assets/post-it-note.jpg");
+  background-repeat: no-repeat no-repeat;
+  background-size: 100%;
+}
+
+.note-item p {
+  padding-top: 50px;
+}
+
+.note-item::-webkit-scrollbar {
+  display: none;
+}
+
+.delete-note {
+  float: right;
+  height: 20px;
+  width: 20px;
+}
+
+input {
+  margin: 20px 5px 0px 5px;
+}
+
+button {
+  color: white;
+  background-color: rgba(54, 141, 244, 1);
+  border: 2px solid white;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: grey;
+  border: 2px solid white;
+}

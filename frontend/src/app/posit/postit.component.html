@@ -1,0 +1,40 @@
+<a href="#">
+  <div class="note-item" data-id="{{postit.id}}" (click)="onEdit()">
+    <div>
+      <img data-id="{{postit.id}}" (click)="onDelete($event)" class="delete-note" src="assets/dustbin.png" alt="delete note" />
+    </div>
+    <div class="note-content-wrapper">
+      <p id="note-content-text-{{postit.id}}" class="note-content">{{postit.text}}</p>
+    </div>
+  </div>
+</a>
+
+<div class="backdrop" *ngIf="isEditting || isDeleting"></div>
+<div id="edit-modal" class="alert-box" [style.display]="isEditting ? 'block':'none'">
+  <form #editForm="ngForm" (ngSubmit)="onUpdate(editForm)">
+    <h2>Edit Note</h2>
+    <p>What should your note say?</p>
+    <div class="form-group">
+      <textarea placeholder="Enter your note" id="note-{{postit.id}}" name="note" class="form-control" ngModel required autofocus></textarea>
+    </div>
+
+    <div class="col-md-12 text-right">
+      <button id="edit-note-submit-{{postit.id}}"  type="submit" class="btn btn-primary">UPDATE</button>
+      <button type="button" class="btn btn-secondary" (click)="onCloseModal()">CANCEL</button>
+    </div>
+  </form>
+</div>
+<div id="delete-modal" class="alert-box" [style.display]="isDeleting ? 'block':'none'">
+  <form #deleteForm="ngForm" (ngSubmit)="onConfirmDelete(deleteForm)">
+    <h2>Delete Note</h2>
+    <p>Are you sure you want to delete the following note?</p>
+    <div class="form-group">
+      <textarea placeholder="Enter your note" id="note-{{postit.id}}" name="note" class="form-control" disabled ngModel required></textarea>
+    </div>
+
+    <div class="col-md-12 text-right">
+      <button id="delete-note-{{postit.id}}" type="submit" class="btn btn-primary">CONFIRM</button>
+      <button type="button" class="btn btn-secondary" (click)="onCloseModal()">CANCEL</button>
+    </div>
+  </form>
+</div>

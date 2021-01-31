@@ -1,0 +1,9 @@
+frontend/node_modules/*
+frontend/dist/*
+backend/target/*
+backend/postit.iml
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.vscode/
+

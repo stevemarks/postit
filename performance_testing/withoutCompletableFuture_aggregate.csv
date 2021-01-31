@@ -1,0 +1,6 @@
+Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Sent KB/sec
+Basic Authorization HTTP Request,10,482,436,781,781,781,148,781,0.000%,10.52632,4.43,1.89
+Get Postit notes before creating HTTP Request,10,373,377,394,394,398,296,398,0.000%,25.12563,9.74,5.03
+Create Postit1 HTTP Request,10000,214,208,273,315,401,95,791,0.000%,20.94158,9.65,7.65
+Get Postit notes HTTP Request,10000,259,246,344,408,533,122,1011,0.000%,20.95496,7858.76,4.20
+TOTAL,20020,236,226,318,364,496,95,1011,0.000%,41.80588,7841.06,11.81

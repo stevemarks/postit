@@ -1,0 +1,12 @@
+h1 {
+  color: rgba(54, 141, 244, 1);
+}
+
+input {
+  margin: 5px 5px 5px 5px;
+}
+
+.login-box {
+  padding: 20px;
+  width: 200px;
+}

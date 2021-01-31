@@ -1,0 +1,10 @@
+tenants:
+  default:
+    reference: postit
+  datasources:
+    - tenant: postit
+      username: admin
+      password: password
+    - tenant: movies
+      username: admin
+      passwword: password

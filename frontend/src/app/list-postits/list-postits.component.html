@@ -1,0 +1,13 @@
+<div class="alert alert-success" *ngIf="message">{{ message }}</div>
+
+<div *ngIf="isLoading">
+  Loading
+</div>
+<div *ngIf="!postits || postits.length === 0" class="h-100 d-flex justify-content-center align-items-center">
+    No Post it notes
+</div>
+<div class="container">
+  <div *ngIf="!isLoading && postits" class="row">
+    <app-postit *ngFor="let postit of postits" [postit]="postit"></app-postit>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<header class="header-container">
+  <nav class="">
+    <div class="h-100 d-flex justify-content-center align-items-center">
+      <div class="">
+        <a href="#" class="navbar-brand"><span>POST IT</span></a>
+      </div>
+
+      <ul class="">
+        <app-create-postit></app-create-postit>
+      </ul>
+
+      <ul class="row">
+        <div *ngIf="basicAuthenticationService.isUserLoggedIn()">
+          <span id="username" class="username">{{ user }}</span>
+          <br />
+          <a href="/logout" id="logout-link"><span>logout</span></a>
+        </div>
+      </ul>
+    </div>
+  </nav>
+</header>
